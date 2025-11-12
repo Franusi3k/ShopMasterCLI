@@ -1,0 +1,11 @@
+{
+    "name": "franusi3k/shopmaster",
+    "description": "CLI system for managing orders and products in pure PHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}

@@ -1,0 +1,78 @@
+# ShopMaster CLI
+
+A modular **command-line application** built in **pure PHP 8.3**, designed to manage products, orders, payments, and inventory — **without any framework**.
+
+This project demonstrates strong understanding of **OOP**, **software architecture**, and **domain-driven design principles** in a clean, framework-independent environment.
+
+---
+
+## Features
+
+- Modular architecture (Product, Order, Customer, Payment, Delivery)
+- Layered design: Controller → Service → Repository → Model
+- Custom Dependency Injection (no framework)
+- Exception-based error handling
+- Data persistence via JSON files (no database)
+- Input validation and domain rules
+- PSR-4 autoloading (Composer)
+
+---
+
+## Project Structure
+
+app/
+ ├── Core/              # CLI Kernel, Container, Interfaces
+ ├── Modules/
+ │   ├── Product/
+ │   ├── Order/
+ │   ├── Customer/
+ │   ├── Payment/
+ │   └── Delivery/
+ └── Support/           # Helpers, utilities, file storage
+storage/
+ ├── products.json
+ ├── orders.json
+ ├── customers.json
+ └── logs/
+tests/
+ ├── Customer/
+ ├── Delivery/
+ ├── Order/
+ ├── Payment/
+ └── Product/
+bin/
+ └── console            # Entry point (CLI router)
+composer.json
+README.md
+
+---
+
+## Goals 
+
+Showcase architectural understanding of PHP projects
+
+Practice domain-driven design (DDD-lite)
+
+Build a scalable modular CLI system from scratch
+
+---
+
+## Technologies
+
+- PHP 8.3
+- Composer (autoloading)
+- PSR-4
+- OOP, SOLID, DDD-lite
+- JSON file storage
+- CLI interface
+
+---
+
+## Setup
+
+```bash
+composer install
+php test.php
+```
+
+---
