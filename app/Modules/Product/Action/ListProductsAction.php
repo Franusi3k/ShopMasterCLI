@@ -26,6 +26,6 @@ class ListProductsAction
     {
         $str = str_repeat("-", 50);
 
-        return "\n" . $str . "\nID: " . $product['id'] . "\nName: " . $product['name'] . "\nQuantity: " . $product['quantity'] . "\nPrice: " . $product['price'] . "\nDescription: " . ($product['description'] ?? 'No description...');
+        return "\n" . $str . "\nID: " . $product['id'] . "\nName: " . $product['name'] . "\nQuantity: " . $product['quantity'] . "\nPrice: " . $product['price'] . "\nDescription: " . ($product['description'] ?? 'No description...') . "\n";
     }
 }
