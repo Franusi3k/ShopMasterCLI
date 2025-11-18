@@ -4,7 +4,14 @@ namespace App\Core;
 
 class CliKernel
 {
-    public function handle(array $argv)
+    private CliContainer $container;
+
+    public function __construct()
+    {
+        $this->container = new CliContainer;
+    }
+
+    public function handle(array $argv): void
     {
         if (!isset($argv[1])) {
             echo "No command provided\n";
@@ -34,7 +41,7 @@ class CliKernel
             return;
         }
 
-        $controller = new $controllerClass();
+        $controller = $this->container->resolve($controllerClass);
 
         if (!method_exists($controller, $action)) {
             echo "Unkown action '$action' for module $module \n";

@@ -2,10 +2,16 @@
 
 namespace App\Modules\Product\Controllers;
 
+use App\Modules\Product\Action\ListProductsAction;
+
 class ProductController
 {
-    public function show(): void
+    public function __construct(
+        private ListProductsAction $listAction
+    ) {}
+
+    public function index(): void
     {
-        echo "Cli Kernel is working correctly...";
+        echo $this->listAction->execute();
     }
 }
