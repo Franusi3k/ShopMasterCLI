@@ -5,7 +5,7 @@ namespace App\Core\Validation\Rules;
 use App\Core\Validation\Exceptions\ValidationFailedException;
 use App\Core\Validation\ValidationRule;
 
-class Required implements ValidationRule
+class RequiredRule implements ValidationRule
 {
     public function apply(string $ruleName, string $field, mixed $value = null, mixed $constraint = null): bool
     {
