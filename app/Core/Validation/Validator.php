@@ -7,6 +7,7 @@ use App\Core\Validation\Rules\FloatRule;
 use App\Core\Validation\Rules\IntRule;
 use App\Core\Validation\Rules\MaxRule;
 use App\Core\Validation\Rules\MinRule;
+use App\Core\Validation\Rules\NullableRule;
 use App\Core\Validation\Rules\RequiredRule;
 use App\Core\Validation\Rules\StringRule;
 use Exception;
@@ -21,7 +22,8 @@ class Validator
         'boolean' => BooleanRule::class,
         'string' => StringRule::class,
         'float' => FloatRule::class,
-        'int' => IntRule::class
+        'int' => IntRule::class,
+        'nullable' => NullableRule::class
     ];
 
     public function validate(array $data, array $rules)
