@@ -36,7 +36,6 @@ class ProductRepository
             throw new ProductNotFoundException("Product with id $id not found");
         }
 
-        // return $this->factory->make();
-        return [];
+        return $this->products[$id];
     }
 }
