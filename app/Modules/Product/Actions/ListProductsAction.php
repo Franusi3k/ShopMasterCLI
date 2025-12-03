@@ -6,11 +6,7 @@ use App\Modules\Product\Repositories\ProductRepository;
 
 class ListProductsAction
 {
-    public function __construct(
-
-        protected ProductRepository $repo
-
-    ) {}
+    public function __construct(protected ProductRepository $repo) {}
 
     public function execute(): string
     {
