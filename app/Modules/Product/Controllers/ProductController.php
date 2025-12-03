@@ -26,7 +26,7 @@ class ProductController
 
     public function create(): void
     {
-        $data = ['id' => 1, 'name' => 'HAHAHA', 'quantity' => 5, 'price' => 17.99, 'description' => "rasdas"]; //test data
+        $data = ['name' => 'Product Name!:D', 'quantity' => 5, 'price' => 17.99, 'description' => "rasdas"]; //test data
 
         echo $this->createAction->execute($data);
     }

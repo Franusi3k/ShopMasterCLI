@@ -9,7 +9,7 @@ class ProductFactory
     public function make(array $data): Product
     {
         return new Product(
-            id: $data['id'],
+            id: null,
             name: $data['name'],
             quantity: $data['quantity'],
             price: $data['price'],

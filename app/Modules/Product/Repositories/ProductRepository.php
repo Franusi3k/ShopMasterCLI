@@ -47,8 +47,12 @@ class ProductRepository
 
     public function save(Product $product): void
     {
+        if ($product->id === null) {
+            $product->id = $this->nextId();
+        }
+
         $this->products[] = [
-            'id' => $this->nextId(),
+            'id' => $product->id,
             'name' => $product->name,
             'quantity' => $product->quantity,
             'price' => $product->price,
@@ -57,7 +61,7 @@ class ProductRepository
 
         file_put_contents(
             $this->path,
-            json_encode(['products' => $this->products], JSON_PRETTY_PRINT)
+            json_encode($this->products, JSON_PRETTY_PRINT)
         );
     }
 }
