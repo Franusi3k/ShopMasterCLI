@@ -15,4 +15,4 @@ class IntRule implements ValidationRule
 
         return true;
     }
-} 
+}
